@@ -1,6 +1,6 @@
 from itertools import permutations, product
 # Функция permutations() модуля itertools возвращает итератор с последовательными перестановками из элементов входной последовательности iterable
-def solve24(nums):
+def game24(nums):
     ops = ['+', '-', '*', '/'] # Операторы, которые мы можем использовать
     for a, b, c, d in permutations(nums): # Генерируем все возможные перестановки цифр
         for op1, op2, op3 in product(ops, repeat=3): # Генерируем все возможные комбинации операторов
@@ -18,4 +18,4 @@ def solve24(nums):
     return 'No solution' # Если ни одно из выражений не дает результата 24
 
 nums = input('Enter four digits: ') # Получаем строку из четырех цифр, введенных пользователем с клавиатуры
-print(solve24(nums)) # Передаем эту строку в функцию solve24 и выводим результат
+print(game24(nums)) # Передаем эту строку в функцию solve24 и выводим результат
